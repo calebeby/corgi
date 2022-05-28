@@ -2,7 +2,7 @@
 
 //! Machine learning, and dynamic automatic differentiation implementation.
 
-extern crate mimalloc;
+// extern crate mimalloc;
 
 #[cfg(feature = "blas")]
 extern crate cblas_sys;
@@ -15,7 +15,7 @@ extern crate openblas_src;
 #[macro_use]
 extern crate approx;
 
-use mimalloc::MiMalloc;
+// use mimalloc::MiMalloc;
 
 pub mod numbers;
 #[macro_use]
@@ -29,8 +29,8 @@ pub mod layer;
 pub mod model;
 pub mod optimizer;
 
-#[global_allocator]
-static GLOBAL: MiMalloc = MiMalloc;
+// #[global_allocator]
+// static GLOBAL: MiMalloc = MiMalloc;
 
 #[cfg(test)]
 mod tests {
